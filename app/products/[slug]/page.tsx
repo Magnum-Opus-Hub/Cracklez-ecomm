@@ -6,30 +6,29 @@ import { ProductGallery } from "@/components/product-gallery"
 import { ProductInfo } from "@/components/product-info"
 
 interface Props {
-params: {
-  slug: string
+  params: {
+    slug: string
+  }
 }
-}
 
-export default async function Page({params} : Props) {
-
-const product = await client.fetch<SanityProduct>( //SanityProduct[]
-  groq`*[_type == "product" && slug.current == "${params.slug}"][0] {
-    _id,
-    "id": _id,
-    _createdAt,
-    name,
-    sku,
-    images,
-    price,
-    description,
-    currency,
-    sizes: ,
-    colors,
-    categories,
-    "slug": slug.current,
-  }`)
-
+export default async function Page({ params }: Props) {
+  const product = await client.fetch<SanityProduct>(
+    groq`*[_type == "product" && slug.current == "${params.slug}"][0] {
+      _id,
+      "id": _id,
+      _createdAt,
+      name,
+      sku,
+      images,
+      price,
+      description,
+      currency,
+      sizes, // Add the correct property name for sizes
+      colors,
+      categories,
+      "slug": slug.current
+    }`
+  )
 
   return (
     <main className="mx-auto max-w-5xl sm:px-6 sm:pt-16 lg:px-8">
@@ -37,7 +36,7 @@ const product = await client.fetch<SanityProduct>( //SanityProduct[]
         {/* Product */}
         <div className="pb-20 lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-12">
           {/* Product gallery */}
-          <ProductGallery product={product}  />
+          <ProductGallery product={product} />
           {/* Product info */}
           <ProductInfo product={product} />
         </div>
