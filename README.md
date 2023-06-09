@@ -18,7 +18,7 @@ Welcome to the Cracklez Art Shop! This is a web application built with Next.js, 
 ## Technologies Used
 
 - **Frontend:** Next.js, TypeScript, Tailwind CSS
-- **Backend:** Node.js 
+- **Backend:** Node.js
 - **Database:** Sanity
 - **Payment Processing:** Stripe
 - **Content Management System:** Sanity
@@ -27,7 +27,7 @@ Welcome to the Cracklez Art Shop! This is a web application built with Next.js, 
 
 Follow these steps to set up the project locally on your machine:
 
-1. Clone the repository: `git clone https://github.com/your-username/project-name.git`
+1. Clone the repository: `git clone https://github.com/Magnum-Opus-Hub/Cracklez-ecomm.git`
 2. Navigate to the project directory: `cd project-name`
 3. Install dependencies: `npm install`
 4. Set up environment variables:
