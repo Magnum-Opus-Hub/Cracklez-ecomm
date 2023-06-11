@@ -38,6 +38,7 @@ export function CartItems() {
       className="divide-y divide-gray-200 border-y border-gray-200 dark:divide-gray-500 dark:border-gray-500"
     >
       {cartItems.map((product, productIdx) => (
+        // console.log(product.product_data?.size),
         <li key={product._id} className="flex py-6 sm:py-10">
           <div className="shrink-0">
             <Image
