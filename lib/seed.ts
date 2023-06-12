@@ -6,7 +6,7 @@ export async function seedSanityData() {
   const transaction = client.transaction()
   inventory.forEach((item) => {
     const product = {
-      _type: "product",
+       _type: "product",
       _id: item.id,
       name: item.name,
       currency: item.currency,
